@@ -126,8 +126,8 @@ jobs:
           CONFIG_PACKAGE_wpad-openssl=y
           CONFIG_PACKAGE_luci-app-mtwifi=n
           CONFIG_PACKAGE_luci-app-unblockmusic=n
-          # CONFIG_PACKAGE_-pixiewps=y
-          # CONFIG_PACKAGE_-reaver=y
+          CONFIG_PACKAGE_-pixiewps=y
+          CONFIG_PACKAGE_-reaver=y
           
           # Tor
           CONFIG_PACKAGE_tor=y
