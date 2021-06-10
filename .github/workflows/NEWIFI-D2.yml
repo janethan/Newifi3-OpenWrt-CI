@@ -128,12 +128,22 @@ jobs:
           CONFIG_PACKAGE_luci-app-unblockmusic=n
           CONFIG_PACKAGE_-pixiewps=y
           CONFIG_PACKAGE_-reaver=y
+          CONFIG_PACKAGE_kmod-rt2800-usb=y
+          CONFIG_PACKAGE_kmod-rt2x00-usb=y
+          CONFIG_PACKAGE_kmod-rtl8187=y
+          CONFIG_PACKAGE_kmod-rtl8192ce=y
+          CONFIG_PACKAGE_kmod-rtl8192cu=y
+          CONFIG_PACKAGE_kmod-rtl8192de=y
+          CONFIG_PACKAGE_kmod-rtl8192se=y
+          CONFIG_PACKAGE_kmod-rtl8723bs=y
           
           # Tor
           CONFIG_PACKAGE_tor=y
           CONFIG_PACKAGE_tor-gencert=y
           CONFIG_PACKAGE_tor-geoip=y
           CONFIG_PACKAGE_tor-resolve=y
+          CONFIG_PACKAGE_kmod-rtl8821ae=y
+          CONFIG_PACKAGE_kmod-rtl8xxxu=y
           
           EOF
           
