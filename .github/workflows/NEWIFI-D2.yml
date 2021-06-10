@@ -129,6 +129,12 @@ jobs:
           # CONFIG_PACKAGE_-pixiewps=y
           # CONFIG_PACKAGE_-reaver=y
           
+          # Tor
+          CONFIG_PACKAGE_tor=y
+          CONFIG_PACKAGE_tor-gencert=y
+          CONFIG_PACKAGE_tor-geoip=y
+          CONFIG_PACKAGE_tor-resolve=y
+          
           EOF
           
           sed -i 's/^[ \t]*//g' ./.config
