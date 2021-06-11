@@ -114,7 +114,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-syncdial=y
           CONFIG_PACKAGE_luci-app-travelmate=y
           CONFIG_PACKAGE_luci-app-ttyd=y
-          CONFIG_PACKAGE_luci-app-usb-printer=y
+          # CONFIG_PACKAGE_luci-app-usb-printer=y
           # CONFIG_PACKAGE_luci-app-xlnetacc=y
 
           # Open source WIFI driver
@@ -136,14 +136,14 @@ jobs:
           CONFIG_PACKAGE_kmod-rtl8192de=y
           CONFIG_PACKAGE_kmod-rtl8192se=y
           CONFIG_PACKAGE_kmod-rtl8723bs=y
+          CONFIG_PACKAGE_kmod-rtl8821ae=y
+          CONFIG_PACKAGE_kmod-rtl8xxxu=y
           
           # Tor
           CONFIG_PACKAGE_tor=y
           CONFIG_PACKAGE_tor-gencert=y
           CONFIG_PACKAGE_tor-geoip=y
           CONFIG_PACKAGE_tor-resolve=y
-          CONFIG_PACKAGE_kmod-rtl8821ae=y
-          CONFIG_PACKAGE_kmod-rtl8xxxu=y
           
           EOF
           
