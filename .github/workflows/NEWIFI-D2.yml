@@ -131,13 +131,13 @@ jobs:
           CONFIG_PACKAGE_kmod-rt2800-usb=y
           CONFIG_PACKAGE_kmod-rt2x00-usb=y
           CONFIG_PACKAGE_kmod-rtl8187=y
-          CONFIG_PACKAGE_kmod-rtl8192ce=y
-          CONFIG_PACKAGE_kmod-rtl8192cu=y
-          CONFIG_PACKAGE_kmod-rtl8192de=y
-          CONFIG_PACKAGE_kmod-rtl8192se=y
-          CONFIG_PACKAGE_kmod-rtl8723bs=y
-          CONFIG_PACKAGE_kmod-rtl8821ae=y
-          CONFIG_PACKAGE_kmod-rtl8xxxu=y
+          # CONFIG_PACKAGE_kmod-rtl8192ce=y
+          # CONFIG_PACKAGE_kmod-rtl8192cu=y
+          # CONFIG_PACKAGE_kmod-rtl8192de=y
+          # CONFIG_PACKAGE_kmod-rtl8192se=y
+          # CONFIG_PACKAGE_kmod-rtl8723bs=y
+          # CONFIG_PACKAGE_kmod-rtl8821ae=y
+          # CONFIG_PACKAGE_kmod-rtl8xxxu=y
           
           # Tor
           CONFIG_PACKAGE_tor=y
