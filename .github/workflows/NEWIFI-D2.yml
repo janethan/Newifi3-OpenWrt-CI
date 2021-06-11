@@ -92,7 +92,7 @@ jobs:
           
           # APP
           CONFIG_PACKAGE_luci-app-advancedsetting=y
-          CONFIG_PACKAGE_luci-app-aliddns=y
+          # CONFIG_PACKAGE_luci-app-aliddns=y
           CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-hd-idle=y
           CONFIG_PACKAGE_luci-app-meshwizard=y
@@ -112,8 +112,8 @@ jobs:
           CONFIG_XRAY_PLUGIN_PROVIDE_V2RAY_PLUGIN=y
           CONFIG_PACKAGE_xray-plugin=y
           # CONFIG_PACKAGE_luci-app-syncdial=y
-          CONFIG_PACKAGE_luci-app-travelmate=y
-          CONFIG_PACKAGE_luci-app-ttyd=y
+          # CONFIG_PACKAGE_luci-app-travelmate=y
+          # CONFIG_PACKAGE_luci-app-ttyd=y
           # CONFIG_PACKAGE_luci-app-usb-printer=y
           # CONFIG_PACKAGE_luci-app-xlnetacc=y
 
