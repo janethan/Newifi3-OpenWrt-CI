@@ -54,7 +54,7 @@ jobs:
           ./scripts/feeds install -a
       - name: Costom configure file
         run: |
-          sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+          sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap/g' feeds/luci/collections/luci/Makefile
           rm -f ./.config*
           touch ./.config
           cat >> .config <<EOF
