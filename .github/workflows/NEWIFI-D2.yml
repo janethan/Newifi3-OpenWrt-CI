@@ -129,7 +129,7 @@ jobs:
           CONFIG_PACKAGE_-reaver=y
           CONFIG_PACKAGE_kmod-rt2800-usb=y
           # CONFIG_PACKAGE_kmod-rt2x00-usb=y
-          # CONFIG_PACKAGE_kmod-rtl8187=y
+          CONFIG_PACKAGE_kmod-rtl8187=y
           # CONFIG_PACKAGE_kmod-rtl8192ce=y
           # CONFIG_PACKAGE_kmod-rtl8192cu=y
           # CONFIG_PACKAGE_kmod-rtl8192de=y
