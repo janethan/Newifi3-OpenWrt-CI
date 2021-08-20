@@ -39,7 +39,7 @@ jobs:
           sudo -E apt-get clean
       - name: Download lede
         run: |
-          git clone https://github.com/coolsnowwolf/lede
+          git clone https://github.com/janethan/lede
           mv ./lede/* ./
       - name: Install addons
         run: |
@@ -115,6 +115,8 @@ jobs:
           # CONFIG_PACKAGE_luci-app-ttyd=y
           # CONFIG_PACKAGE_luci-app-usb-printer=y
           # CONFIG_PACKAGE_luci-app-xlnetacc=y
+          CONFIG_PACKAGE_luci-app-oaf=y
+
 
           # Open source WIFI driver
           CONFIG_PACKAGE_kmod-mt7603=y
