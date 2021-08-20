@@ -104,9 +104,9 @@ jobs:
           # CONFIG_PACKAGE_luci-app-meshwizard=y
           # CONFIG_PACKAGE_luci-app-mwan3=y
           # CONFIG_PACKAGE_luci-app-mwan3helper=y
-          CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils=n
-          CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng=n
-          CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui=n
+          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils=n
+          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng=n
+          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui=n
           CONFIG_PACKAGE_luci-app-samba=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
@@ -115,11 +115,9 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_obfs=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
-          CONFIG_PACKAGE_xray-core=y
-          CONFIG_PACKAGE_xray-geodata=y
           CONFIG_PACKAGE_xray-plugin=y
-          CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=n
-          CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=n
+          # CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=n
+          # CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=n
           # CONFIG_PACKAGE_luci-app-syncdial=y
           # CONFIG_PACKAGE_luci-app-travelmate=y
           # CONFIG_PACKAGE_luci-app-ttyd=y
