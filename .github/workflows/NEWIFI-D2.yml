@@ -56,6 +56,8 @@ jobs:
         run: |
           sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap/g' feeds/luci/collections/luci/Makefile
           sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
+          sed -i 's/OpenWrt/iPhone8/g' package/base-files/files/bin/config_generate
+          sed -i 's/OpenWrt/CMCC-A281/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
           rm -f ./.config*
           touch ./.config
           cat >> .config <<EOF
@@ -63,19 +65,17 @@ jobs:
           CONFIG_TARGET_ramips=y
           CONFIG_TARGET_ramips_mt7621=y
           CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
-
+          
           # Gzip
           CONFIG_TARGET_IMAGES_GZIP=y
-
+          
           # IPv6
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=n
           CONFIG_PACKAGE_ipv6helper=n
           CONFIG_BUSYBOX_DEFAULT_FEATURE_IPV6=n
           CONFIG_IPV6=n
           CONFIG_KERNEL_IPV6=n
-
-
-
+          
           # USB support
           ONFIG_PACKAGE_kmod-usb-core=y
           CONFIG_PACKAGE_kmod-usb3=y
@@ -124,11 +124,12 @@ jobs:
           # CONFIG_PACKAGE_luci-app-travelmate=y
           # CONFIG_PACKAGE_luci-app-ttyd=y
           # CONFIG_PACKAGE_luci-app-usb-printer=y
+          CONFIG_PACKAGE_luci-app-uugamebooster=n
           # CONFIG_PACKAGE_luci-app-xlnetacc=y
           CONFIG_PACKAGE_luci-app-oaf=y
           CONFIG_PACKAGE_luci-i18n-adbyby-plus-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-advanced-reboot-zh-cn=y
-
+          
           # Open source WIFI driver
           CONFIG_PACKAGE_kmod-mt7603=y
           CONFIG_PACKAGE_kmod-mt7603e=n
