@@ -139,10 +139,10 @@ jobs:
           # CONFIG_PACKAGE_kmod-rtl8xxxu=y
           
           # Tor
-          CONFIG_PACKAGE_tor=y
-          CONFIG_PACKAGE_tor-gencert=y
-          CONFIG_PACKAGE_tor-geoip=y
-          CONFIG_PACKAGE_tor-resolve=y
+          # CONFIG_PACKAGE_tor=y
+          # CONFIG_PACKAGE_tor-gencert=y
+          # CONFIG_PACKAGE_tor-geoip=y
+          # CONFIG_PACKAGE_tor-resolve=y
           
           EOF
           
