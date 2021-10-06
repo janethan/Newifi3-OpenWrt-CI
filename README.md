@@ -30,7 +30,7 @@
 # CONFIG_PACKAGE_luci-app-syncdial=y
 ```
 ## 网关地址
-- IP 192.168.1.1
+- IP 192.168.100.1
 - Username root
 - Password password
 
