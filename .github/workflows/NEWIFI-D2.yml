@@ -111,6 +111,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
           CONFIG_PACKAGE_xray-plugin=y
+          CONFIG_PACKAGE_privoxy=y
           # CONFIG_PACKAGE_luci-app-syncdial=y
           # CONFIG_PACKAGE_luci-app-travelmate=y
           # CONFIG_PACKAGE_luci-app-ttyd=y
