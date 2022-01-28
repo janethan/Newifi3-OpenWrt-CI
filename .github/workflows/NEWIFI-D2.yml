@@ -139,6 +139,7 @@ jobs:
           # CONFIG_PACKAGE_kmod-rtl8723bs=y
           CONFIG_PACKAGE_kmod-rtl8821ae=y
           # CONFIG_PACKAGE_kmod-rtl8xxxu=y
+          CONFIG_PACKAGE_wireless-tools=y
           
           # Tor
           CONFIG_PACKAGE_tor=y
