@@ -90,6 +90,7 @@ jobs:
           #CONFIG_PACKAGE_usbip-server=y
           
           # APP
+          CONFIG_PACKAGE_luci-app-adbyby-plus=y
           CONFIG_PACKAGE_luci-app-advancedsetting=y
           # CONFIG_PACKAGE_luci-app-aliddns=y
           CONFIG_PACKAGE_luci-app-frpc=n
@@ -109,7 +110,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
           CONFIG_PACKAGE_xray-plugin=y
-          CONFIG_PACKAGE_privoxy=y
           # CONFIG_PACKAGE_luci-app-syncdial=y
           # CONFIG_PACKAGE_luci-app-travelmate=y
           # CONFIG_PACKAGE_luci-app-ttyd=y
