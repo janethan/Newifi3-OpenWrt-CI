@@ -109,7 +109,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_obfs=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
           CONFIG_PACKAGE_xray-plugin=y
           # CONFIG_PACKAGE_luci-app-syncdial=y
           # CONFIG_PACKAGE_luci-app-travelmate=y
@@ -127,8 +127,8 @@ jobs:
           CONFIG_PACKAGE_wpad-openssl=y
           CONFIG_PACKAGE_luci-app-mtwifi=n
           CONFIG_PACKAGE_luci-app-unblockmusic=n
-          CONFIG_PACKAGE_pixiewps=y
-          CONFIG_PACKAGE_reaver=y
+          #CONFIG_PACKAGE_pixiewps=y
+          #CONFIG_PACKAGE_reaver=y
           CONFIG_PACKAGE_kmod-rt2800-usb=y
           CONFIG_PACKAGE_kmod-rt2x00-usb=y
           CONFIG_PACKAGE_kmod-rtl8187=y
@@ -142,10 +142,10 @@ jobs:
           CONFIG_PACKAGE_wireless-tools=y
           
           # Tor
-          CONFIG_PACKAGE_tor=y
-          CONFIG_PACKAGE_tor-gencert=y
-          CONFIG_PACKAGE_tor-geoip=y
-          CONFIG_PACKAGE_tor-resolve=y
+          #CONFIG_PACKAGE_tor=y
+          #CONFIG_PACKAGE_tor-gencert=y
+          #CONFIG_PACKAGE_tor-geoip=y
+          #CONFIG_PACKAGE_tor-resolve=y
           
           EOF
           
