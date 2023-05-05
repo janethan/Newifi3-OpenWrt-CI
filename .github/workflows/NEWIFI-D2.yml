@@ -132,6 +132,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-unblockmusic=n
           #CONFIG_PACKAGE_pixiewps=y
           #CONFIG_PACKAGE_reaver=y
+          CONFIG_PACKAGE_aircrack-ng=y
           CONFIG_PACKAGE_kmod-rt2800-usb=y
           CONFIG_PACKAGE_kmod-rt2x00-usb=y
           CONFIG_PACKAGE_kmod-rtl8187=y
