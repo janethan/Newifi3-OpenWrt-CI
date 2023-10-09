@@ -111,16 +111,16 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
           CONFIG_PACKAGE_xray-plugin=y
           # CONFIG_PACKAGE_luci-app-syncdial=y
-          CONFIG_PACKAGE_luci-app-travelmate=y
+          # CONFIG_PACKAGE_luci-app-travelmate=y
           # CONFIG_PACKAGE_luci-app-ttyd=y
-          # CONFIG_PACKAGE_luci-app-usb-printer=y
+          CONFIG_PACKAGE_luci-app-usb-printer=y
           CONFIG_PACKAGE_luci-app-uhttpd=y
           # CONFIG_PACKAGE_luci-app-xlnetacc=y
           CONFIG_PACKAGE_luci-app-oaf=y
-          # CONFIG_PACKAGE_luci-app-privoxy=y
+          CONFIG_PACKAGE_luci-app-privoxy=y
           # Open source WIFI driver
           CONFIG_PACKAGE_kmod-mt7603=y
           CONFIG_PACKAGE_kmod-mt7603e=n
