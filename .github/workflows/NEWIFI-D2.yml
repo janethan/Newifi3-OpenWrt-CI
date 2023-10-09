@@ -96,7 +96,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-aliddns=y
           CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-hd-idle=y
-          CONFIG_PACKAGE_luci-app-meshwizard=y
+          # CONFIG_PACKAGE_luci-app-meshwizard=y
           # CONFIG_PACKAGE_luci-app-mwan3=y
           # CONFIG_PACKAGE_luci-app-mwan3helper=y
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils=n
@@ -116,7 +116,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-syncdial=y
           # CONFIG_PACKAGE_luci-app-travelmate=y
           # CONFIG_PACKAGE_luci-app-ttyd=y
-          CONFIG_PACKAGE_luci-app-usb-printer=y
+          # CONFIG_PACKAGE_luci-app-usb-printer=y
           CONFIG_PACKAGE_luci-app-uhttpd=y
           # CONFIG_PACKAGE_luci-app-xlnetacc=y
           CONFIG_PACKAGE_luci-app-oaf=y
@@ -132,7 +132,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-unblockmusic=n
           #CONFIG_PACKAGE_pixiewps=y
           #CONFIG_PACKAGE_reaver=y
-          CONFIG_PACKAGE_aircrack-ng=y
+          #CONFIG_PACKAGE_aircrack-ng=y
           CONFIG_PACKAGE_kmod-rt2800-usb=y
           CONFIG_PACKAGE_kmod-rt2x00-usb=y
           CONFIG_PACKAGE_kmod-rtl8187=y
