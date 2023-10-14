@@ -1,58 +1,47 @@
-#
-# This is free software, lisence use MIT.
-# 
-# Copyright (C) 2019 P3TERX <https://p3terx.com>
-# Copyright (C) 2019 KFERMercer <KFER.Mercer@gmail.com>
-# Copyright (C) 2020 LemoFire <https://www.ito.fun>
-#
-# <https://github.com/P3TERX/Actions-OpenWrt>
-# <https://github.com/KFERMercer/OpenWrt-CI>
-# <https://github.com/LemoFire/autoOpenWrt>
-###
-
 name: NEWIFI-D2
 
 on:
   push:
-    branches: 
+    branches:
       - master
-  # schedule:
-      # - cron: 0 6 * * 5
   watch:
     types: started
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # runs-on: ubuntu-20.04
-    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
       - name: Checkout
-        uses: actions/checkout@master
-      - name: Initialization environment
+        uses: actions/checkout@v2
+
+      - name: Setup Build Environment
+        run: |
+          sudo apt-get update -qy
+          sudo apt-get install -y build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 unzip zlib1g-dev libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib
+          sudo apt-get autoremove --purge -y
+          sudo apt-get clean
         env:
           DEBIAN_FRONTEND: noninteractive
-        run: |
-          sudo -E apt-get -y update
-          sudo -E apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 unzip zlib1g-dev libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib
-          sudo -E apt-get -y autoremove --purge
-          sudo -E apt-get clean
-      - name: Download lede
+
+      - name: Download OpenWrt
         run: |
           git clone https://github.com/janethan/lede
           mv ./lede/* ./
-      - name: Install addons
+          
+      - name: Add Custom Package Repositories
         run: |
           echo "src-git helloworld https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
           echo "src-git CloudflareSpeedTest https://github.com/immortalwrt/openwrt-cdnspeedtest" >> ./feeds.conf.default
           cd package
           mkdir openwrt-packages
-      - name: Update feeds
+
+      - name: Update Package Feeds
         run: |
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-      - name: Costom configure file
+
+      - name: Customize Configuration
         run: |
           sed -i 's/luci-theme-bootstrap/luci-theme-bootstrap/g' feeds/luci/collections/luci/Makefile
           sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
@@ -152,24 +141,24 @@ jobs:
            # CONFIG_PACKAGE_tor-resolve=y
           
           EOF
-          
           sed -i 's/^[ \t]*//g' ./.config
           make defconfig
-      - name: Download package source code
+
+      - name: Download Package Source Code
         run: |
           make download -j8
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
-      - name: Compile firmware
+
+      - name: Compile Firmware
         run: |
           echo -e "$(nproc) thread build."
-          # make -j$(nproc) V=s
-          # make -j$(nproc) V=0
           make -j$(nproc) || make -j1 || make -j1 V=s
           echo "status=success" >> $GITHUB_ENV
           grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
           [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
           echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
+
       - name : Upload artifact
         uses: actions/upload-artifact@master
         with:
