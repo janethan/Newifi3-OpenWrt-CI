@@ -82,7 +82,6 @@ jobs:
           CONFIG_PACKAGE_kmod-fs-exfat=y
           CONFIG_PACKAGE_kmod-fs-ext4=y
           CONFIG_PACKAGE_kmod-fs-ntfs=y
-          CONFIG_PACKAGE_kmod-fs-exfat=y
           
           # USPIP service
           CONFIG_PACKAGE_kmod-usb-ohci=y
@@ -120,7 +119,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-usb-printer=y
           CONFIG_PACKAGE_luci-app-uhttpd=y
           # CONFIG_PACKAGE_luci-app-xlnetacc=y
-          # CONFIG_PACKAGE_luci-app-oaf=y
+          CONFIG_PACKAGE_luci-app-oaf=y
           CONFIG_PACKAGE_luci-app-privoxy=y
           # Open source WIFI driver
           CONFIG_PACKAGE_kmod-mt7603=y
