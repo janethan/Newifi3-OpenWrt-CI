@@ -91,7 +91,7 @@ jobs:
           
           # APP
           # CONFIG_PACKAGE_luci-app-adbyby-plus=y
-          # CONFIG_PACKAGE_luci-app-advancedsetting=y
+          CONFIG_PACKAGE_luci-app-advancedsetting=y
           CONFIG_PACKAGE_luci-app-advanced=y
           # CONFIG_PACKAGE_luci-app-aliddns=y
           # CONFIG_PACKAGE_luci-app-frpc=y
@@ -146,10 +146,10 @@ jobs:
           CONFIG_PACKAGE_wireless-tools=y
           
           # Tor
-          # CONFIG_PACKAGE_tor=y
-          # CONFIG_PACKAGE_tor-gencert=y
-          # CONFIG_PACKAGE_tor-geoip=y
-          # CONFIG_PACKAGE_tor-resolve=y
+           CONFIG_PACKAGE_tor=y
+           CONFIG_PACKAGE_tor-gencert=y
+           CONFIG_PACKAGE_tor-geoip=y
+           CONFIG_PACKAGE_tor-resolve=y
           
           EOF
           
