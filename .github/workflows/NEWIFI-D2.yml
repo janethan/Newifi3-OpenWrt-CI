@@ -198,7 +198,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
             tag_name: ${{ steps.tag.outputs.release_tag }}
-            body_path: release.txt  # 发行说明
+            #body_path: release.txt  # 发行说明
             body_path: ""
             #files: ${{ env.FIRMWARE }}/bin/targets/ramips/mt7621/*in*
             files: bin/targets/ramips/mt7621/
