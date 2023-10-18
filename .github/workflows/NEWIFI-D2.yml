@@ -32,6 +32,7 @@ jobs:
       - name: Add Custom Package Repositories
         run: |
           echo "src-git helloworld https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
+          echo "src-git cdnspeedtest https://github.com/immortalwrt-collections/openwrt-cdnspeedtest.git" >> ./feeds.conf.default
           echo "src-git CloudflareSpeedTest https://github.com/immortalwrt/openwrt-cdnspeedtest" >> ./feeds.conf.default
           cd package
           mkdir openwrt-packages
@@ -95,11 +96,11 @@ jobs:
           CONFIG_PACKAGE_luci-app-samba=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=n
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_obfs=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
           CONFIG_PACKAGE_xray-plugin=y
