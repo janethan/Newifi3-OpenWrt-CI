@@ -6,6 +6,12 @@ on:
       - master
   watch:
     types: started
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
 
 jobs:
   build:
@@ -144,6 +150,13 @@ jobs:
           sed -i 's/^[ \t]*//g' ./.config
           make defconfig
 
+      - name: SSH connection to Actions
+        uses: P3TERX/ssh2actions@v1.0.0
+        if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+        env:
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
       - name: Download Package Source Code
         run: |
           make download -j8
@@ -159,17 +172,23 @@ jobs:
           [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
           echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
 
+      - name: Check space usage
+        if: (!cancelled())
+        run: df -hT
+
       - name : Upload artifact
         uses: actions/upload-artifact@master
         with:
           name: OpenWrt-newifi-d2
-          path: bin/targets/ramips/mt7621/*in*
+          path: bin/targets/ramips/mt7621/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
+          # path: bin/targets/ramips/mt7621/*in*
 
       - name: Generate release tag
         id: tag
         if: always()
         run: |
           echo "release_tag=$(date +'%Y.%m.%d-%H%M')" >> $GITHUB_OUTPUT
+          touch release.txt
           echo "status=success" >> $GITHUB_OUTPUT
 
       - name: Upload firmware to release
@@ -179,9 +198,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
             tag_name: ${{ steps.tag.outputs.release_tag }}
-            body_path: release.txt
+            body_path: release.txt  # 发行说明
+            body_path: ""
             #files: ${{ env.FIRMWARE }}/bin/targets/ramips/mt7621/*in*
-            files: bin/targets/ramips/mt7621/*in*
+            files: bin/targets/ramips/mt7621/
 
       - name: Delete workflow runs
         uses: GitRML/delete-workflow-runs@main
