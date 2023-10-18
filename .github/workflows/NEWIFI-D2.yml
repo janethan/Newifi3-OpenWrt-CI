@@ -32,8 +32,6 @@ jobs:
       - name: Add Custom Package Repositories
         run: |
           echo "src-git helloworld https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
-          echo "src-git cdnspeedtest https://github.com/immortalwrt-collections/openwrt-cdnspeedtest.git" >> ./feeds.conf.default
-          echo "src-git CloudflareSpeedTest https://github.com/immortalwrt/openwrt-cdnspeedtest" >> ./feeds.conf.default
           cd package
           mkdir openwrt-packages
 
