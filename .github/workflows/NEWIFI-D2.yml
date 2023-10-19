@@ -201,7 +201,7 @@ jobs:
             #body_path: release.txt  # 发行说明
             body_path: ""
             #files: ${{ env.FIRMWARE }}/bin/targets/ramips/mt7621/*in*
-            files: bin/targets/ramips/mt7621/
+            files: bin/targets/ramips/mt7621/*in*
 
       - name: Delete workflow runs
         uses: GitRML/delete-workflow-runs@main
