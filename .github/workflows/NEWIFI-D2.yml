@@ -88,7 +88,6 @@ jobs:
           # APP
           # CONFIG_PACKAGE_luci-app-adbyby-plus=y
           CONFIG_PACKAGE_luci-app-advancedsetting=y
-          CONFIG_PACKAGE_luci-app-advanced=y
           # CONFIG_PACKAGE_luci-app-aliddns=y
           CONFIG_PACKAGE_luci-app-cloudflarespeedtest=y
           # CONFIG_PACKAGE_luci-app-frpc=y
@@ -97,8 +96,8 @@ jobs:
           # CONFIG_PACKAGE_luci-app-mwan3=y
           # CONFIG_PACKAGE_luci-app-mwan3helper=y
           # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_fuse-utils=n
-          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng=n
-          # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui=n
+          CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng=n
+          CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui=n
           CONFIG_PACKAGE_luci-app-samba=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
@@ -111,13 +110,16 @@ jobs:
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Hysteria=y
           CONFIG_PACKAGE_xray-plugin=y
           # CONFIG_PACKAGE_luci-app-syncdial=y
-          CONFIG_PACKAGE_luci-app-travelmate=y
+          # CONFIG_PACKAGE_luci-app-travelmate=n
           # CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-usb-printer=y
           CONFIG_PACKAGE_luci-app-uhttpd=y
-          # CONFIG_PACKAGE_luci-app-xlnetacc=y
+          CONFIG_PACKAGE_luci-app-xlnetacc=n
           CONFIG_PACKAGE_luci-app-oaf=y
           CONFIG_PACKAGE_luci-app-privoxy=y
+          CONFIG_PACKAGE_luci-app-commands=y
+          CONFIG_PACKAGE_luci-app-watchcat=y
+          CONFIG_PACKAGE_luci-app-homebox=y
           # Open source WIFI driver
           CONFIG_PACKAGE_kmod-mt7603=y
           CONFIG_PACKAGE_kmod-mt7603e=n
