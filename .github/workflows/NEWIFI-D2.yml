@@ -119,7 +119,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-privoxy=y
           CONFIG_PACKAGE_luci-app-commands=y
           CONFIG_PACKAGE_luci-app-watchcat=y
-          CONFIG_PACKAGE_luci-app-homebox=y
+          # CONFIG_PACKAGE_luci-app-homebox=y
           # Open source WIFI driver
           CONFIG_PACKAGE_kmod-mt7603=y
           CONFIG_PACKAGE_kmod-mt7603e=n
